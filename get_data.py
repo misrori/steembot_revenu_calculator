@@ -56,7 +56,7 @@ all_transfer['timestamp'] = all_transfer['timestamp'].apply(lambda dt: datetime.
 price_data = get_prices()
 
 eredemeny_df = all_transfer.merge(price_data, left_on='timestamp', right_on='time', how='left')
-blacklist= ['cuttie1979', "blocktrades"]
+blacklist= ['cuttie1979', "blocktrades", "minnowbooster"]
 eredmeny_df = eredemeny_df[eredemeny_df["from"].isin(blacklist)==False]
 eredmeny_df["to"]= name
 
